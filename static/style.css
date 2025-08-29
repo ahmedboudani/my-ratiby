@@ -1,0 +1,228 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    padding:  10px 50px;
+    background-color: #D3D3D3;
+    font-weight: bold;
+}
+
+.logo {
+   background-color:#191970;
+   display: flex;
+   border-radius: 10px;
+   margin:0 5px ;
+  
+}
+
+.logo img {
+    height: 40px;
+     /* لون إطار اللوجو */
+    padding: 5px 20px;
+    border-radius: 50%; /* شكل دائري */
+}
+
+.tete{
+    background-color: #000066;
+    height: 5px;
+    margin:2px 8px;
+}
+.logo .title {
+    position: absolute;
+    transform: translateX(-50%);
+    color: white;
+    margin: 0 30px;
+
+    font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-size: 26px;
+  
+}
+.page{
+    background-color: #c7c9ca;
+}
+.group{
+    display: flex;
+}
+.inputs{
+   
+   margin: 5px;
+}
+.image {
+width: 300px;
+height: 300px;
+background-color:#191970 ;
+padding: 10px 30px;
+margin-top: 10px;
+}
+ .image img{
+    width: 300px;
+    border-radius: 50%;
+    border: #28a745 10px;
+  
+}
+.input-group{
+    max-width:300px;
+    background-color:#191970;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+     margin-bottom: 6px;
+    
+}
+
+.input-group input,
+.input-group select{
+    flex: 2;
+    padding: 5px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    max-width:200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.input-group-btn{
+    background-color:#191970 ;
+    margin-top: 20px;
+     padding: 0px 00px;
+     justify-content:space-between;
+     border-radius: 8px;
+     display: flex;
+     
+}
+.input-group-check{
+   width:300px;
+    background-color:#191970 ;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+     margin-bottom: 6px;
+     justify-content:space-between;
+    
+}
+#export_pdf{
+   width:360px;
+    color: white;
+    background-color: #0b3e71;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #000066;
+    border-radius: 10px;
+   
+}
+#export_pdf:hover {
+    background-color:#6699ff;
+    color:#330066;
+    font-weight: bold;
+}
+.result{
+  background-color: #191970; 
+  width: 950px;
+  margin: 5px;
+  border-radius: 10px;
+  padding:  0 20px;
+  
+ 
+}
+.ligne{
+    height: 3px;
+    background-color: #c7c9ca;
+}
+.result-line{
+   margin:10px ; 
+   color: white;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+   
+}
+.group2{
+border-radius: 10px;
+margin-left: 5px;
+display: flex;
+ justify-content:space-between;
+
+  
+}
+.group2 .deductions{
+  background-color: #0066cc;
+   max-width: 660px;
+   border-radius: 10px;
+}
+
+/* الحركة */
+@keyframes borderGrow {
+    from {
+        border-bottom-width: 0;
+    }
+    to {
+        border-bottom-width:5px;
+    }
+}
+
+.principal-salary {
+    border-bottom: 2px solid #EF9815;
+    font-weight: bold;
+    color: #EF9815;
+}
+
+.total-salary,
+.total-deduction,
+.final-salary,
+.performance-allowance {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+.final-salary .value {
+    color:#003300 ;
+   
+    background-color: white;
+    padding: 5px;
+     border-radius: 5px;
+}
+#performance_allowance{
+    background-color: white;
+    color: #000066;
+    padding: 5px;
+     border-radius: 5px;
+}
+.total-deduction .value {
+    color: red;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.performance-allowance {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+@media (max-width: 500px) {
+    .input-group {
+       
+        align-items: stretch;
+    }
+    .input-group label {
+        width: 100%;
+        text-align: right;
+        border-radius: 4px 4px 0 0;
+    }
+    .input-group input,
+    .input-group select {
+        width: 100%;
+        max-width: 100%;
+    }
+}
