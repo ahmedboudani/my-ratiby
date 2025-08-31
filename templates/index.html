@@ -8,6 +8,9 @@
     <link rel="icon" href="/ratiby/static/imgs/g.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>برنامج راتبي</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -133,12 +136,10 @@
     </script>
 </head>
 <body>
-    <div class="tete"></div>
     <div class="logo">
         <img src="/static/imgs/ratiby.png" alt="logo">
        <h1 class="title">راتبـــــــي</h1>
     </div>
-   <div class="tete"></div>
     <div class="page">
         <div class="group">
             <div class="inputs">
@@ -203,7 +204,7 @@
                 </div>
                 <div class="input-group-check">
                     <label for="solidarity_checkbox">إقتطاع التعاضدية</label>
-                    <input type="checkbox" id="solidarity_checkbox" name="solidarity_checkbox" >
+                    <input class="chexbox" type="checkbox" id="solidarity_checkbox" name="solidarity_checkbox" >
                 </div>
                 <div class="input-group-btn">
                     <button id="export_pdf">تصدير إلى PDF</button>
@@ -214,8 +215,7 @@
                 </div>
             </div>
         
-        <div class="result">
-               <div>
+              <div class="result">
                     <div class="result-line">
                         <span>الصنف:</span>
                         <span class="value" id="category_id">0.00</span>
@@ -322,14 +322,22 @@
                         <span>منحة المردودية /3 أشهر:</span>
                         <span class="value" id="performance_allowance">0.00</span>
                     </div>
-                </div>
-            </div>
+               
         </div>
         
     </div>
     <div class="facebook">
-        <a href="https://www.facebook.com/abouyacin.boudani.2025" target="_blank">facebook</a>
-                <a href="tel:+213666854075" target="_blank">whatsapp</a>
+    
+       <ul>
+         <a class="face" href="https://www.facebook.com/abouyacin.boudani.2025" target="_blank">facebook</a>
+         <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        <ul>
+        <ul>
+          <a class="phone" href="tel:+213666854075" target="_blank">whatsapp</a>
+          <a  href="tel:+213666854075"><i class="fa-brands fa-whatsapp"></i></a>
+        </ul>
+        
+               
     </div>
 </body>
 </html>
