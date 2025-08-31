@@ -136,13 +136,21 @@ def get_salaries(category, rank, degree, family_status, children_count, senior_c
 
     base_salary_points = bas_mapping.get(cat_id, 0)
     base_salary_value = base_salary_points * 45
+    
     results['base_salary'] = base_salary_value
+    if  base_salary_value==0:
+        forfait_allowance = 0
+    else:
+        forfait_allowance = 1500
+    results['forfait_allowance'] = forfait_allowance
+
 
     mihania_points = deg_mapping.get(cat_id, {}).get(degree, 0)
     mihania_value = mihania_points * 45
     results['mihania'] = mihania_value
 
     principal_salary = base_salary_value + mihania_value
+    
     results['principal_salary'] = principal_salary
 
     technical_allowance = 0
@@ -196,8 +204,10 @@ def get_salaries(category, rank, degree, family_status, children_count, senior_c
         tawthik_allowance = tawthik_mapping.get(cat_id, 0)
     results['tawthik_allowance'] = tawthik_allowance
 
-    forfait_allowance = 1500
-    results['forfait_allowance'] = forfait_allowance
+     # أي تصنيف غير فارغ يأخذ 1500
+
+    
+
     
     gross_salary = (principal_salary + technical_allowance + technical_allowance + taahil_allowance +
                     tawthik_allowance + pedagogie_allowance + school_support_allowance +
