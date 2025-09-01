@@ -80,10 +80,10 @@ category_mapping = {
     "أستاذ تعليم إبتدائي": "12", "أ ت متوسط قسم أول": "13", "أستاذ تعليم ثانوي": "13", "مستشار التربية": "13",
     "مشرف عام للتربية": "13", "مربي متخصص عام في الدعم التربوي": "13", "أ ت إبتدائي قسم أول": "13",
     "مستشار محلل للتوجيه م و م": "13", "مستشار رئيسي للتغذية المدرسية": "13", "مقتصد": "13",
-    "أ ت إبتدائي قسم ثان": "14", "أستاذ تعليم ثانوي قسم أول": "14", "ناظر في التعليم الابتدائي": "14",
+    "أ ت إبتدائي قسم ثان": "14", "أ ت ثانوي قسم أول": "14", "ناظر في التعليم الابتدائي": "14",
     "مستشار رئيسي للتوجيه م و م": "14", "مستشار رئيس للتغذية المدرسية": "14", "مقتصد رئيسي": "14",
     "أستاذ مميز في التعليم الابتدائي": "15", "أ ت متوسط قسم ثان": "15", "ناظر في التعليم المتوسط": "15",
-    "مدير مدرسة إبتدائية": "15", "أستاذ مميز في التعليم المتوسط": "16", "أستاذ تعليم ثانوي قسم ثان": "16",
+    "مدير مدرسة إبتدائية": "15", "أستاذ مميز في التعليم المتوسط": "16", "أ ت ثانوي قسم ثان": "16",
     "ناظر في التعليم الثانوي": "16", "مدير متوسطة": "16", "مستشار رئيس للتوجيه م و م": "16",
     "مفتش المالي للتعليم المتوسط": "16", "أستاذ مميز في التعليم الثانوي": "17", "مدير ثانوية": "17",
     "مفتش مادة للتعليم الابتدائي": "17", "مفتش إدارة للتعليم الابتدائي": "17",
@@ -138,13 +138,7 @@ def get_salaries(category, rank, degree, family_status, children_count, senior_c
     base_salary_value = base_salary_points * 45
     
     results['base_salary'] = base_salary_value
-    if  base_salary_value==0:
-        forfait_allowance = 0
-    else:
-        forfait_allowance = 1500
-    results['forfait_allowance'] = forfait_allowance
-
-
+   
     mihania_points = deg_mapping.get(cat_id, {}).get(degree, 0)
     mihania_value = mihania_points * 45
     results['mihania'] = mihania_value
@@ -167,6 +161,11 @@ def get_salaries(category, rank, degree, family_status, children_count, senior_c
             taahil_allowance = principal_salary * 0.45
     results['taahil_allowance'] = taahil_allowance
 
+    if  base_salary_value==0:
+        forfait_allowance = 0
+    else:
+        forfait_allowance = 1500
+    results['forfait_allowance'] = forfait_allowance
     pedagogie_allowance = 0
     if category not in ["موظفو المخابر", "موظفو مصالح الاقتصادية"]:
         pedagogie_allowance = degree * base_salary_value * 0.04
@@ -206,9 +205,6 @@ def get_salaries(category, rank, degree, family_status, children_count, senior_c
 
      # أي تصنيف غير فارغ يأخذ 1500
 
-    
-
-    
     gross_salary = (principal_salary + technical_allowance + technical_allowance + taahil_allowance +
                     tawthik_allowance + pedagogie_allowance + school_support_allowance +
                     management_allowance + finance_management_allowance + forfait_allowance)
