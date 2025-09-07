@@ -1,0 +1,338 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 5px;
+    padding:  10px 50px;
+    background-color: #D3D3D3;
+    font-weight: bold;
+}
+
+.logo {
+   background-color:#191970;
+   display: flex;
+   border-radius: 10px;
+   margin:0 5px ;
+  
+}
+.facebook{
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+}
+.facebook ul{
+   display: flex;
+  padding-left: 10px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.facebook ul .phone{
+    margin-left: 5px;
+    text-decoration: none;
+    color: #003300;
+}
+.facebook ul .face{
+     margin-left: 5px;
+    text-decoration: none;
+    color: #190491;
+}
+.logo img {
+    height: 40px;
+     /* لون إطار اللوجو */
+    padding: 5px 20px;
+    border-radius: 50%; /* شكل دائري */
+}
+.logo .title {
+    position: absolute;
+    transform: translateX(-50%);
+    color: white;
+    margin: 0 30px;
+
+    font-family: "Noto Kufi Arabic", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-size: 26px;
+  
+}
+.page{
+    background-color: #c7c9ca;
+}
+.group{
+    display: flex;
+}
+.inputs{
+   
+   margin: 5px;
+}
+.image {
+width: 300px;
+height: 300px;
+background-color:#191970 ;
+padding: 10px 30px;
+margin-top: 10px;
+}
+ .image img{
+    width: 300px;
+    border-radius: 50%;
+    border: #28a745 10px;
+}
+.input-group{
+    max-width:300px;
+    background-color:#191970;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+     margin-bottom: 6px;
+    
+}
+
+.input-group input,
+.input-group select{
+    flex: 2;
+    padding: 5px;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    max-width:200px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.input-group-btn{
+    background-color:#191970 ;
+    margin-top: 20px;
+     padding: 0px 00px;
+     justify-content:space-between;
+     border-radius: 8px;
+     display: flex;
+     
+}
+.input-group-check{
+   width:300px;
+    background-color:#191970 ;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+     margin-bottom: 6px;
+     justify-content:space-between;
+    
+}
+#export_pdf{
+   width:360px;
+    color: white;
+    background-color: #0b3e71;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid #000066;
+    border-radius: 10px;
+   
+}
+#export_pdf:hover {
+    background-color:#6699ff;
+    color:#330066;
+    font-weight: bold;
+}
+.result{
+  background-color: #191970; 
+  width: 950px;
+  margin: 5px;
+  border-radius: 10px;
+  padding:  0 20px;
+ 
+
+  }
+ 
+
+.ligne{
+    height: 3px;
+    background-color: #c7c9ca;
+}
+.result-line{
+   margin:10px ; 
+   color: white;
+   font-weight: bold;
+   display: flex;
+   justify-content: space-between;
+   
+}
+.group2{
+border-radius: 10px;
+margin-left: 5px;
+display: flex;
+ justify-content:space-between;
+
+  
+}
+.group2 .deductions{
+  background-color: #0066cc;
+   max-width: 660px;
+   border-radius: 10px;
+}
+
+/* الحركة */
+@keyframes borderGrow {
+    from {
+        border-bottom-width: 0;
+    }
+    to {
+        border-bottom-width:5px;
+    }
+}
+
+.principal-salary {
+    border-bottom: 2px solid #EF9815;
+    font-weight: bold;
+    color: #EF9815;
+}
+
+.total-salary,
+.total-deduction,
+.final-salary,
+.performance-allowance {
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+.final-salary .value {
+    color:#003300 ;
+   
+    background-color: white;
+    padding: 5px;
+     border-radius: 5px;
+}
+#performance_allowance{
+    background-color: white;
+    color: #000066;
+    padding: 5px;
+     border-radius: 5px;
+}
+.total-deduction .value {
+    color: red;
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.performance-allowance {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+@media (max-width: 500px) {
+    .input-group {
+       
+        align-items: stretch;
+    }
+    .input-group label {
+        width: 100%;
+        text-align: right;
+        border-radius: 4px 4px 0 0;
+    }
+    .input-group input,
+    .input-group select {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+/* الهواتف الصغيرة */
+@media (max-width: 500px) {
+    body {
+        padding: 5px 10px;
+    }
+    .logo .title {
+        font-size: 18px;
+    }
+    .image {
+       max-width:400px;
+        height: auto;
+        padding: 10px 15px;
+        margin-top: 10px;
+        border-radius: 10px;
+      
+    }
+ 
+ .image img{
+     max-width: 200px;
+    border-radius: 50%;
+    border: #28a745 10px;
+    margin:0 90px;
+   
+    
+}
+    .input-group, .input-group-check {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 5px 10px;
+    }
+    .input-group input,
+    .input-group select ,
+    .input-group-check{
+        max-width: 100%;
+        width: 100%;
+        margin-top: 5px;
+    }
+   
+    .input-group-btn{
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
+    #export_pdf {
+        width: 100%;
+    }
+    .result {
+        max-width: 400px;
+         height: auto;
+        padding:10px;
+        scroll-padding-bottom: auto;
+        margin: 10px 10px;
+    }
+    .ligne{
+        width: 400px;
+        height: 3px;
+        background-color: #c7c9ca;
+    }
+    .input-group-check{
+     width: 85%;
+    background-color:#191970 ;
+    color: white;
+    padding: 5px 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    margin: 6px 5px;
+    justify-content:space-between;
+    }
+}
+
+/* الطابلات */
+@media (max-width: 900px) {
+    .group, .group2 {
+        flex-direction: column;
+    }
+    .image {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto 10px;
+    }
+    .input-group, .input-group-check {
+        max-width: 100%;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content:space-between;
+    }
+    .result {
+        width: 100%;
+    }
+}
+
